@@ -1,0 +1,53 @@
+angular.module('starter.controllers', [])
+
+//$('#myCarousel').carousel('cycle');
+
+.controller('DashCtrl', function($scope) {
+        // 轮播图数据初始化
+         var slides = [];
+         // 添加轮播图源
+         slides.push({ id: '0', class: 'active', link: '#/tab/activity.html', image: 'img/1.jpg', alt: 'First Slide', caption: '数据玩家｜今天截止报名，你还在等吗？', time: '04-30' });
+         slides.push({ id: '1', class: '', link: '#/tab/activity.html',  image: 'img/2.jpg', alt: 'Second Slide', caption: '脱单节日｜520，TA！', time: '05-01' });
+         slides.push({ id: '2', class: '', link: '#/tab/activity.html',  image: 'img/3.jpg', alt: 'Third Slide', caption: '中东美食｜吃货的福利来啦！', time: '05-01' });
+         slides.push({ id: '3', class: '', link: '#/tab/activity.html', image: 'img/4.jpg', alt: 'Forth Slide', caption: '职来职往｜勇往直前，你准备好了吗？', time: '05-03' });
+         slides.push({ id: '4', class: '', link: '#/tab/activity.html', image: 'img/5.jpg', alt: 'Fifth Slide', caption: '电影约吗｜侏罗纪公园来袭', time: '05-07' });
+         $scope.carousels = slides;
+
+        var contents = [];
+        contents.push({ link: '#/tab/activity.html', title: '数据玩家｜今天截止报名，你还在等吗？', time: '截止日期:04-22', readers: '阅读 342', laucher: '中山大学东校区学生会', image: 'img/1.jpg' });
+        contents.push({ link: '#/tab/activity.html', title: '脱单节日｜520，TA！', time: '截止日期:05-01', readers: '阅读 532', laucher: '中山大学爱情树脱单', image: 'img/2.jpg'});
+        contents.push({ link: '#/tab/activity.html', title: '中东美食｜吃货的福利来啦！', time: '截止日期:05-01', readers: '阅读 1111', laucher: '贝岗小吃街', image: 'img/3.jpg'});
+        contents.push({ link: '#/tab/activity.html', title: '职来职往｜勇往直前，你准备好了吗？', time: '截止日期:05-03', readers: '阅读 644', laucher: '中山大学东校区学生会', image: 'img/4.jpg'});
+        contents.push({ link: '#/tab/activity.html', title: '电影约吗｜侏罗纪公园来袭', time: '已截止', readers: '阅读 223', laucher: '中山大学东校区学生会', image: 'img/5.jpg'});
+        contents.push({ link: '#/tab/activity.html', title: '数据玩家｜今天截止报名，你还在等吗？', time: '截止日期:04-22', readers: '阅读 342', laucher: '中山大学东校区学生会', image: 'img/1.jpg' });
+        contents.push({ link: '#/tab/activity.html', title: '脱单节日｜520，TA！', time: '截止日期:05-01', readers: '阅读 532', laucher: '中山大学爱情树脱单', image: 'img/2.jpg'});
+        contents.push({ link: '#/tab/activity.html', title: '中东美食｜吃货的福利来啦！', time: '截止日期:05-01', readers: '阅读 1111', laucher: '贝岗小吃街', image: 'img/3.jpg'});
+        contents.push({ link: '#/tab/activity.html', title: '职来职往｜勇往直前，你准备好了吗？', time: '截止日期:05-03', readers: '阅读 644', laucher: '中山大学东校区学生会', image: 'img/4.jpg'});
+        contents.push({ link: 'activity.html', title: '电影约吗｜侏罗纪公园来袭', time: '已截止', readers: '阅读 223', laucher: '中山大学东校区学生会', image: 'img/5.jpg'});
+        $scope.contents = contents;
+})
+
+.controller('ChatsCtrl', function($scope, Chats) {
+  // With the new view caching in Ionic, Controllers are only called
+  // when they are recreated or on app start, instead of every page change.
+  // To listen for when this page is active (for example, to refresh data),
+  // listen for the $ionicView.enter event:
+  //
+  //$scope.$on('$ionicView.enter', function(e) {
+  //});
+  
+  $scope.chats = Chats.all();
+  $scope.remove = function(chat) {
+    Chats.remove(chat);
+  }
+})
+
+.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
+  $scope.chat = Chats.get($stateParams.chatId);
+})
+
+.controller('AccountCtrl', function($scope) {
+  $scope.settings = {
+    enableFriends: true
+  };
+});

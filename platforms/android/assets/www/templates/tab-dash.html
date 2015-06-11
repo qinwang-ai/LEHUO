@@ -1,0 +1,33 @@
+<ion-view view-title="抢鲜看">
+  <ion-nav-buttons side="right">
+    <button class="button button-icon" style="width:30px;background:url('img/scan.png')"></button>
+  </ion-nav-buttons>
+  <ion-content style="background: #F0F0F0">
+
+    <ion-slide-box on-slide-changed="slideChanged(index)" auto-play="true" does-continue="true">
+        <ion-slide ng-repeat="carousel in carousels;">
+          <a ng-href="{{carousel.link}}">
+            <img ng-src="{{carousel.image}}" alt="{{carousel.alt}}" style="width:100%;height:200px;">
+          </a>
+          <div style="background:black;opacity:0.3;color:white;font-size:10px;padding-top:10px;margin-top:-50px;margin-bottom:10px;height:50px;">
+            <p style="display:inline;margin-left:2%;">{{carousel.caption}}</p>
+            <span style="float:right;margin-right:2%;float:right;">{{carousel.time}}</span>
+          </div>
+        </ion-slide>
+    </ion-slide-box>
+
+    <div style="margin-top:-10px;">
+      <div class="contents" ng-repeat="dash in dashs">
+        <a ng-href="{{dash.link}}">
+          <div class="contents-left">
+            <p class="contents-title">{{dash.title}}</p>
+            <p class="contents-time">截止日期： {{dash.finaldate}}</p>
+            <p class="contents-readers">阅读 {{dash.readers}}</p>
+            <span class="contents-laucher">{{dash.laucher}}</span>
+          </div>
+          <img ng-src="{{dash.image}}" alt="1" class="contents-image">
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

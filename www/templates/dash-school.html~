@@ -1,0 +1,56 @@
+<ion-view view-title="xuanze">
+  <ion-content style="background: #F0F0F0">
+
+	<p class="item">C</p>
+	<div class="list">
+		<label class="item item-radio">
+		  <input type="radio" name="group">
+		    <div class="item-content">
+		      传播与设计学院
+		    </div>
+		    <i class="radio-icon ion-checkmark"></i>
+		</label>
+
+	</div>
+	<p class="item">R</p>
+	<div class="list">
+		<label class="item item-radio">
+		  <input type="radio" name="group">
+		    <div class="item-content">
+		      软件学院
+		    </div>
+		    <i class="radio-icon ion-checkmark"></i>
+		</label>
+
+	</div>
+        <p class="item">X</p>
+	<div class="list">
+		<label class="item item-radio">
+		  <input type="radio" name="group">
+		    <div class="item-content">
+		      信息科学与技术学院
+		    </div>
+		    <i class="radio-icon ion-checkmark"></i>
+		</label>
+
+	</div>
+	<p class="item">Y</p>
+	<div class="list">
+		<label class="item item-radio">
+		  <input type="radio" name="group">
+		    <div class="item-content">
+		      药学院
+		    </div>
+		    <i class="radio-icon ion-checkmark"></i>
+		</label>
+                <label class="item item-radio">
+		  <input type="radio" name="group">
+		    <div class="item-content">
+		      医学院
+		    </div>
+		    <i class="radio-icon ion-checkmark"></i>
+		</label>
+	</div>
+
+  </ion-content>
+</ion-view>

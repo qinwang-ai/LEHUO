@@ -24,6 +24,8 @@ angular.module('starter.services', [])
     finaltime: '12:00', 
     //首页显示的阅读人数
     readers: '419', 
+
+    offerlink: '',
     //备注
     add: '活力五月，定向越野。“奔跑吧，大学生”。',
     //活动详情
@@ -31,7 +33,9 @@ angular.module('starter.services', [])
     //首页显示（包括图片滑动）
     image: 'img/0.jpg',
     //活动页海报
-    poster: 'img/post.jpg'
+    poster: 'img/post.jpg',
+
+    order: true
   },
   {
     id: 1,
@@ -45,11 +49,13 @@ angular.module('starter.services', [])
     way: '网上报名，网址：www.xxx.com',
     starttime: '03-11',
     finaltime: '04-22', 
-    readers: '342', 
+    readers: '342',
+    offerlink: '', 
     add: '组队报名',
     more: '数据时代。。。', 
     image: 'img/1.jpg',
-    poster: 'img/post.jpg'
+    poster: 'img/post.jpg',
+    order: false
   },
   {
     id: 2,
@@ -64,10 +70,12 @@ angular.module('starter.services', [])
     starttime: '00：00',
     finaltime: '23：59', 
     readers: '532', 
+    offerlink: '',
     add: '脱单嘛',
     more: '脱单！ 单！ ！',
     image: 'img/2.jpg',
-    poster: 'img/post.jpg'
+    poster: 'img/post.jpg',
+    order: false
   },
   {
     id: 3,
@@ -82,10 +90,12 @@ angular.module('starter.services', [])
     starttime: '12：00',
     finaltime: '22：00', 
     readers: '1111',
+    offerlink: '',
     add: '凭预约信息可获取一份惊喜！',
     more: '吃吃喝喝吃吃喝喝吃吃喝喝吃吃喝喝',
     image: 'img/3.jpg',
-    poster: 'img/post.jpg'
+    poster: 'img/post.jpg',
+    order: true
   },{
     id: 4,
     link: '#/tab/dash/4', 
@@ -99,10 +109,12 @@ angular.module('starter.services', [])
     starttime: '8：00',
     finaltime: '18:00', 
     readers: '644',
+    offerlink: '',
     add: '挑战自我，成就辉煌',
     more: '走向人生颠峰，开始', 
     image: 'img/4.jpg',
-    poster: 'img/post.jpg'
+    poster: 'img/post.jpg',
+    order: false
   },{
     id: 5,
     link: '#/tab/dash/5', 
@@ -116,10 +128,12 @@ angular.module('starter.services', [])
     starttime: '9：00',
     finaltime: '已截止', 
     readers: '223', 
+    offerlink: '',
     add: '看电影',
     more: '看电影',
     image: 'img/5.jpg',
-    poster: 'img/post.jpg'
+    poster: 'img/post.jpg',
+    order: false
   }];
 
   return {
@@ -133,6 +147,31 @@ angular.module('starter.services', [])
         }
       }
       return null;
+    }
+  };
+})
+
+.factory('Order', function() {
+  var order = {
+    name: "方雪鱼",
+    phone: "18888888271"
+  }
+  return {
+    all: function() {
+      return order;
+    }
+  };
+})
+
+.factory('User', function() {
+  var user = {
+    name: "方雪鱼",
+    phone: "18888888271",
+    image: "img/7.jpg"
+  }
+  return {
+    all: function() {
+      return user;
     }
   };
 });

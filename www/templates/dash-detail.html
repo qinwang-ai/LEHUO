@@ -12,9 +12,9 @@
   -->
 
   <ion-nav-buttons side="right">
-    <button class="button button-icon button-clear ion-ios-star-outline"></button>
+    <button class="button button-icon button-clear ion-ios-star-outline" ng-click="showPopup()"></button>
     <button class="button button-icon button-clear ion-ios-alarm-outline"></button>
-    <button class="button button-icon button-clear ion-chatbox-working"></button>
+    <button class="button button-icon button-clear ion-chatbox-working" ng-click="turn()"></button>
     <button class="button button-icon button-clear ion-share"></button>
   </ion-nav-buttons>
 
@@ -43,10 +43,11 @@
       <p class="activity-text" style="text-indent:2em;">{{dash.more}}</p>
     </div>
 
-    <a href="#">
-      <div class="order activity-item">
+    <a href="#/tab/dash-order" ng-show="{{dash.order}}">
+      <div class="top order activity-item">
       预约
       </div>
     </a>
+
   </ion-content>
 </ion-view>

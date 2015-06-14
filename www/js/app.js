@@ -66,6 +66,32 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+    .state('tab.dash-order', {
+      url: '/dash-order',
+      views: {
+        'tab-dash': {
+          templateUrl: 'templates/dash-order.html',
+          controller: 'DashOrderCtrl'
+        }
+      }
+    })
+    .state('tab.dash-school', {
+      url: '/dash-school',
+      views: {
+        'tab-dash': {
+          templateUrl: 'templates/dash-school.html'
+        }
+      }
+    })
+    .state('tab.dash-message', {
+      url: '/dash-message',
+      views: {
+        'tab-dash': {
+          templateUrl: 'templates/dash-message.html',
+          controller: 'DashMessageCtrl'
+        }
+      }
+    })
 
   .state('tab.corporation', {
     url: '/corporation',

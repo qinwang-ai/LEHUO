@@ -184,3 +184,92 @@ a {
     color: white;
     width: 100px;
 }
+
+.find.typeBar span {
+	font-size: 1.7rem;
+	margin-left: 16px;
+	color: #888;
+}
+
+.find.typeBar {
+	height: 40px;
+	padding-top: 10px;
+}
+
+.activeType {
+	color: #67CCCC !important;
+}
+
+.find img {
+	width:80px;
+	height:85px;
+	float: left;
+	margin-left: 3px;
+}
+
+.find.myItem {
+	padding-top: 7px;
+	padding-bottom: 4px;
+	display: inline-block;
+	width: 100%;
+}
+
+.find.textBlock {
+	float: left;
+	margin-left: 6px;
+	width: 285px;
+	overflow: visible;
+}
+
+.leftText, .rightText {
+	float: left;
+	width:45%;
+	word-wrap: normal;
+}
+
+.find.myItem span {
+	font-size: 8px;
+	display: block;
+	color: #888;
+	line-height: 20px;
+}
+
+.find h5 {
+	margin-top: 0px;
+}
+
+.find.timeBar {
+	background-color: #E8E8E8;
+	height: 28px;
+	padding-top: 6px;
+	border-bottom: solid #CFCFCF 1px;
+}
+
+.find.items {
+	border-bottom: solid #CFCFCF 1px;
+}
+
+.find.timeBar span {
+	color: #888;
+	margin-left: 10px;
+}
+
+a.item {
+	color: black;
+}
+
+a.item.message i.firstIcon, a.item.collection i.firstIcon {
+	color: rgba(0, 192, 255, 1);
+}
+
+a.item.warning i.firstIcon {
+	color: rgba(255, 211, 33, 1);
+}
+
+a.item.following i.firstIcon {
+	color: rgba(255, 62, 0, 1);
+}
+
+a.item.signUp i.firstIcon, a.item.setting i.firstIcon {
+	color: #888;
+}

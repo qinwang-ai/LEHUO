@@ -8,6 +8,8 @@ angular.module('starter.services', [])
     id: 0,
     //点击跳转到详情页的链接
     link: '#/tab/dash/0',
+    //在发现页面点击跳转到详情页的链接
+    findLink: '#/tab/find/0',
     //首页显示的每一个项目标题
     title: '奔跑奔跑｜奔跑奔跑奔跑奔跑奔跑', 
     //详情页的标题
@@ -35,11 +37,14 @@ angular.module('starter.services', [])
     //活动页海报
     poster: 'img/post.jpg',
 
-    order: true
+    order: true,
+    type: 'show',
+    fee: '免费'
   },
   {
     id: 1,
     link: '#/tab/dash/1',
+    findLink: '#/tab/find/1',
     title: '数据玩家｜今天截止报名，你还在等吗？', 
     name: '第十届阿里巴巴数据分析大赛',
     laucher: '中山大学东校区数据学院发展中心',
@@ -55,11 +60,14 @@ angular.module('starter.services', [])
     more: '数据时代。。。', 
     image: 'img/1.jpg',
     poster: 'img/post.jpg',
-    order: false
+    order: false,
+    type: 'volunteer',
+    fee: '50元'
   },
   {
     id: 2,
-    link: '#/tab/dash/2', 
+    link: '#/tab/dash/2',
+    findLink: '#/tab/find/2',
     title: '脱单节日｜520，TA！', 
     name: '脱单！',
     launcher: '中山大学爱情树脱单平台',
@@ -75,11 +83,14 @@ angular.module('starter.services', [])
     more: '脱单！ 单！ ！',
     image: 'img/2.jpg',
     poster: 'img/post.jpg',
-    order: false
+    order: false,
+    type: 'show',
+    fee: '免费'
   },
   {
     id: 3,
     link: '#/tab/dash/3', 
+    findLink: '#/tab/find/3',
     title: '中东美食｜吃货的福利来啦！', 
     name: '',
     laucher: '贝岗新天地',
@@ -95,10 +106,13 @@ angular.module('starter.services', [])
     more: '吃吃喝喝吃吃喝喝吃吃喝喝吃吃喝喝',
     image: 'img/3.jpg',
     poster: 'img/post.jpg',
-    order: true
+    order: true,
+    type: 'show',
+    fee: '100元'
   },{
     id: 4,
-    link: '#/tab/dash/4', 
+    link: '#/tab/dash/4',
+    findLink: '#/tab/find/4',
     title: '职来职往｜勇往直前，你准备好了吗？', 
     name: '',
     laucher: '中山大学东校区职业发展协会',
@@ -114,15 +128,18 @@ angular.module('starter.services', [])
     more: '走向人生颠峰，开始', 
     image: 'img/4.jpg',
     poster: 'img/post.jpg',
-    order: false
+    order: false,
+    type: 'drama',
+    fee: '免费'
   },{
     id: 5,
-    link: '#/tab/dash/5', 
+    link: '#/tab/dash/5',
+    findLink: '#/tab/find/5',
     title: '电影约吗｜侏罗纪公园来袭', 
     name: '一起来看恐龙',
     laucher: '中山大学东校区电影协会',
-    startdate: '03-21',
-    enddate: '03-21',
+    startdate: '04-21',
+    enddate: '05-21',
     address: '广州市 海珠区 车坡南 电影院',
     way: '需提前预约',
     starttime: '9：00',
@@ -133,7 +150,9 @@ angular.module('starter.services', [])
     more: '看电影',
     image: 'img/5.jpg',
     poster: 'img/post.jpg',
-    order: false
+    order: false,
+    type: 'volunteer',
+    fee: '免费'
   }];
 
   return {
@@ -147,6 +166,15 @@ angular.module('starter.services', [])
         }
       }
       return null;
+    },
+    getItemByTypeName: function(typeName) {
+        var items = [];
+        for (var i = 0; i < dashs.length; ++i) {
+            if (dashs[i].type === typeName) {
+                items.push(dashs[i]);
+            }
+        }
+        return items;
     }
   };
 })

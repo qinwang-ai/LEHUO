@@ -66,7 +66,30 @@ angular.module('starter.controllers', ['ionic'])
   
 })
 
-.controller('FindCtrl', function($scope) {
+.controller('FindCtrl', function($scope, Dashs) {
+    $scope.items = Dashs.getItemByTypeName('show');
+    $scope.showItems = function(typeName) {
+        $scope.month = 0;
+        $scope.items = Dashs.getItemByTypeName(typeName);
+    };
+    $scope.getMonth = function(startdate) {
+        return startdate.substr(0, 2);
+    };
+    $scope.changeAndShow = function(startdate) {
+        var month__ = startdate.substr(0, 2);
+        $scope.month = month__;
+        var Chinese = '一二三四五六七八九';
+        if (month__.charAt(0) === '0') {
+            return Chinese.charAt(parseInt(month__.charAt(1)) - 1);
+        } else if (month__.charAt(1) == 0) {
+            return '十';            
+        } else {
+            return '十' + Chinese.charAt(parseInt(month__.charAt(1)) - 1);
+        }
+    }
+})
+
+.controller('searchCtrl', function($scope) {
   
 })
 

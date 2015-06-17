@@ -67,6 +67,54 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
+    .state('tab.find-order', {
+      url: '/find/dash-order',
+      views: {
+        'tab-find': {
+          templateUrl: 'templates/dash-order.html',
+          controller: 'DashOrderCtrl'
+        }
+      }
+    })
+
+    .state('tab.find-detail', {
+      url: '/find/:dashId',
+      views: {
+        'tab-find': {
+          templateUrl: 'templates/find-detail.html',
+          controller: 'DashDetailCtrl'
+        }
+      }
+    })
+
+    .state('tab.dash-order', {
+      url: '/dash-order',
+      views: {
+        'tab-dash': {
+          templateUrl: 'templates/dash-order.html',
+          controller: 'DashOrderCtrl'
+        }
+      }
+    })
+
+    .state('tab.dash-school', {
+      url: '/dash-school',
+      views: {
+        'tab-dash': {
+          templateUrl: 'templates/dash-school.html'
+        }
+      }
+    })
+    .state('tab.dash-message', {
+      url: '/dash-message',
+      views: {
+        'tab-dash': {
+          templateUrl: 'templates/dash-message.html',
+          controller: 'DashMessageCtrl'
+        }
+      }
+    })
+
   .state('tab.corporation', {
     url: '/corporation',
     views: {
@@ -95,6 +143,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'FindCtrl'
       }
     }
+  })
+
+  .state('search', {
+    url: '/search',
+    templateUrl: 'templates/search.html',
+    controller: 'searchCtrl'
   })
 
   .state('tab.mine', {

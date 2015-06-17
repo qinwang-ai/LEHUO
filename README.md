@@ -1,14 +1,7 @@
 # LEHUO
 
 1.进度
-tab-dash         --  抢鲜看（基本实现）
-|  | 
-|  dash-detail  --  活动详情页（基本实现，右上角按钮还没有）
-tab-corporation  --  社团（未实现）
-|
-tab-find         --  发现（未实现）
-|
-tab-mine         --  个人信息（未实现）
+抢鲜看（基本实现, 需完善）| 活动详情页（基本实现，预约，收藏，发信息实现，提醒和转发还没有）｜社团（未实现）|发现（未实现）| 个人信息（未实现）
 
 2.主要编辑www/template下对应的html以及www/js/controllers.js, app.js, services.js
 

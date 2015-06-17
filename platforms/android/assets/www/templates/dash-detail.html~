@@ -12,9 +12,9 @@
   -->
 
   <ion-nav-buttons side="right">
-    <button class="button button-icon button-clear ion-ios-star-outline" ng-click="showPopup()"></button>
+    <button class="button button-icon button-clear ion-ios-star-outline"></button>
     <button class="button button-icon button-clear ion-ios-alarm-outline"></button>
-    <button class="button button-icon button-clear ion-chatbox-working" ng-click="turn()"></button>
+    <button class="button button-icon button-clear ion-chatbox-working"></button>
     <button class="button button-icon button-clear ion-share"></button>
   </ion-nav-buttons>
 
@@ -34,6 +34,11 @@
     </div>
 
     <div class="activity-item contents">
+      <span class="activity-label">xiangguanlianjie：</span>
+      <p class="activity-text" style="">{{dash.offerlink}}</p>
+    </div>
+
+    <div class="activity-item contents">
       <span class="activity-label">备注：</span>
       <p class="activity-text" style="">{{dash.add}}</p>
     </div>
@@ -42,12 +47,9 @@
       <p style="margin:0px;">活动详情：</p>
       <p class="activity-text" style="text-indent:2em;">{{dash.more}}</p>
     </div>
-
-    <a href="#/tab/dash-order" ng-show="{{dash.order}}">
-      <div class="top order activity-item">
-      预约
-      </div>
+    
+    <a href="#/tab/dash-order">
+      <div class="top order activity-item" ng-show="{{dash.order}}">预约</div>
     </a>
-
   </ion-content>
 </ion-view>

@@ -8,6 +8,8 @@ angular.module('starter.services', [])
     id: 0,
     //点击跳转到详情页的链接
     link: '#/tab/dash/0',
+    //在发现页面点击跳转到详情页的链接
+    findLink: '#/tab/find/0',
     //首页显示的每一个项目标题
     title: '奔跑奔跑｜奔跑奔跑奔跑奔跑奔跑', 
     //详情页的标题
@@ -24,6 +26,8 @@ angular.module('starter.services', [])
     finaltime: '12:00', 
     //首页显示的阅读人数
     readers: '419', 
+
+    offerlink: '',
     //备注
     add: '活力五月，定向越野。“奔跑吧，大学生”。',
     //活动详情
@@ -31,11 +35,16 @@ angular.module('starter.services', [])
     //首页显示（包括图片滑动）
     image: 'img/0.jpg',
     //活动页海报
-    poster: 'img/post.jpg'
+    poster: 'img/post.jpg',
+
+    order: true,
+    type: 'show',
+    fee: '免费'
   },
   {
     id: 1,
     link: '#/tab/dash/1',
+    findLink: '#/tab/find/1',
     title: '数据玩家｜今天截止报名，你还在等吗？', 
     name: '第十届阿里巴巴数据分析大赛',
     laucher: '中山大学东校区数据学院发展中心',
@@ -45,15 +54,20 @@ angular.module('starter.services', [])
     way: '网上报名，网址：www.xxx.com',
     starttime: '03-11',
     finaltime: '04-22', 
-    readers: '342', 
+    readers: '342',
+    offerlink: '', 
     add: '组队报名',
     more: '数据时代。。。', 
     image: 'img/1.jpg',
-    poster: 'img/post.jpg'
+    poster: 'img/post.jpg',
+    order: false,
+    type: 'volunteer',
+    fee: '50元'
   },
   {
     id: 2,
-    link: '#/tab/dash/2', 
+    link: '#/tab/dash/2',
+    findLink: '#/tab/find/2',
     title: '脱单节日｜520，TA！', 
     name: '脱单！',
     launcher: '中山大学爱情树脱单平台',
@@ -64,14 +78,19 @@ angular.module('starter.services', [])
     starttime: '00：00',
     finaltime: '23：59', 
     readers: '532', 
+    offerlink: '',
     add: '脱单嘛',
     more: '脱单！ 单！ ！',
     image: 'img/2.jpg',
-    poster: 'img/post.jpg'
+    poster: 'img/post.jpg',
+    order: false,
+    type: 'show',
+    fee: '免费'
   },
   {
     id: 3,
     link: '#/tab/dash/3', 
+    findLink: '#/tab/find/3',
     title: '中东美食｜吃货的福利来啦！', 
     name: '',
     laucher: '贝岗新天地',
@@ -82,13 +101,18 @@ angular.module('starter.services', [])
     starttime: '12：00',
     finaltime: '22：00', 
     readers: '1111',
+    offerlink: '',
     add: '凭预约信息可获取一份惊喜！',
     more: '吃吃喝喝吃吃喝喝吃吃喝喝吃吃喝喝',
     image: 'img/3.jpg',
-    poster: 'img/post.jpg'
+    poster: 'img/post.jpg',
+    order: true,
+    type: 'show',
+    fee: '100元'
   },{
     id: 4,
-    link: '#/tab/dash/4', 
+    link: '#/tab/dash/4',
+    findLink: '#/tab/find/4',
     title: '职来职往｜勇往直前，你准备好了吗？', 
     name: '',
     laucher: '中山大学东校区职业发展协会',
@@ -99,27 +123,36 @@ angular.module('starter.services', [])
     starttime: '8：00',
     finaltime: '18:00', 
     readers: '644',
+    offerlink: '',
     add: '挑战自我，成就辉煌',
     more: '走向人生颠峰，开始', 
     image: 'img/4.jpg',
-    poster: 'img/post.jpg'
+    poster: 'img/post.jpg',
+    order: false,
+    type: 'drama',
+    fee: '免费'
   },{
     id: 5,
-    link: '#/tab/dash/5', 
+    link: '#/tab/dash/5',
+    findLink: '#/tab/find/5',
     title: '电影约吗｜侏罗纪公园来袭', 
     name: '一起来看恐龙',
     laucher: '中山大学东校区电影协会',
-    startdate: '03-21',
-    enddate: '03-21',
+    startdate: '04-21',
+    enddate: '05-21',
     address: '广州市 海珠区 车坡南 电影院',
     way: '需提前预约',
     starttime: '9：00',
     finaltime: '已截止', 
     readers: '223', 
+    offerlink: '',
     add: '看电影',
     more: '看电影',
     image: 'img/5.jpg',
-    poster: 'img/post.jpg'
+    poster: 'img/post.jpg',
+    order: false,
+    type: 'volunteer',
+    fee: '免费'
   }];
 
   return {
@@ -133,6 +166,40 @@ angular.module('starter.services', [])
         }
       }
       return null;
+    },
+    getItemByTypeName: function(typeName) {
+        var items = [];
+        for (var i = 0; i < dashs.length; ++i) {
+            if (dashs[i].type === typeName) {
+                items.push(dashs[i]);
+            }
+        }
+        return items;
+    }
+  };
+})
+
+.factory('Order', function() {
+  var order = {
+    name: "方雪鱼",
+    phone: "18888888271"
+  }
+  return {
+    all: function() {
+      return order;
+    }
+  };
+})
+
+.factory('User', function() {
+  var user = {
+    name: "方雪鱼",
+    phone: "18888888271",
+    image: "img/7.jpg"
+  }
+  return {
+    all: function() {
+      return user;
     }
   };
 })

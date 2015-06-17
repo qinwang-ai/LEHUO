@@ -77,6 +77,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('tab.corporation-detail', {
+    url: '/corporation/:corporationId',
+    views: {
+      'tab-corporation': {
+        templateUrl: 'templates/corporation-detail.html',
+        controller: 'CorporationDetailCtrl'
+      }
+    }
+  })
+
   .state('tab.find', {
     url: '/find',
     views: {

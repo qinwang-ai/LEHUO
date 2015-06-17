@@ -173,3 +173,52 @@ a {
 	color: #67CCCC;
 	text-decoration: none;
 }
+
+.corporation {color: black}
+
+.corporation.corporation-search-bar {
+  width: 10px;
+  position: fixed;
+  right: 0;
+  top: 70px;
+}
+
+.corporation.corporation-detail-header {
+	background-image:url(/img/6.jpg);
+	background-size:cover;
+	height:200px;
+}
+
+.corporation.corporation-title-box {
+	width:120px;
+	margin:auto;
+	padding-top:40px;
+	text-align:center;
+	color:white!important;
+}
+
+.corporation.corporation-avatar {
+	margin:auto;
+	height:70px;
+	width:70px;
+	background-size:cover;
+	border:2px solid white;
+	border-radius:50%;
+}
+
+.corporation.corporation-content-nav {
+	text-align: center;
+	border-bottom: 1px solid gray;
+}
+
+.corporation.corporation-content-nav li {
+	display: inline-block;
+	padding: 8px 15px 8px 15px;
+	margin: 0 5px 0 5px;
+	color: gray；
+}
+
+.corporation.corporation-content-nav .nav-chosen {
+	color: black;
+	border-bottom: 2px solid blue;
+}

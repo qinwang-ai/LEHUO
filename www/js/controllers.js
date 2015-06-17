@@ -31,8 +31,30 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('CorporationCtrl', function($scope) {
-  
+.controller('CorporationCtrl', function($scope, Corporations) {
+  var corporations = Corporations.all().sort(function(x,y) {return x.alias > y.alias});
+  var alphabet = [];
+  $scope.corporations = corporations;
+  for (var i = 0; i < 26; i++) {
+    alphabet.push(String.fromCharCode(65+i));
+  }
+  $scope.alphabet = alphabet;
+  $scope.queryByNameOrAlias = function() {
+    return function(e) {
+      console.log ($scope.query);
+      return !$scope.query || e.name.indexOf($scope.query) >= 0 || e.alias.indexOf($scope.query) >= 0 ;
+    }
+  }
+})
+
+.controller('CorporationDetailCtrl', function($scope, $stateParams, Corporations, $ionicSlideBoxDelegate){
+  $scope.corporation = Corporations.get($stateParams.corporationId);
+  $scope.changeSlide = function(index) {
+    $ionicSlideBoxDelegate.slide(index,1000);
+  };
+  $scope.getIndex = function() {
+    return $ionicSlideBoxDelegate.currentIndex();
+  }
 })
 
 .controller('FindCtrl', function($scope) {

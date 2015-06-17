@@ -135,4 +135,71 @@ angular.module('starter.services', [])
       return null;
     }
   };
+})
+
+.factory('Corporations', function(){
+    var corporations = [{
+        id: 0,
+        name: "GBT",
+        alias: "gbt",
+        avatar: "img/1.jpg",
+        profile: "中东广播台",
+        introduction: "中大广播台是blablablbal...",
+        review: "中大广播台历史悠久balbalbla...",
+        recent: "中大广播台最近举行了balbalbla..."
+    }, {
+        id: 1,
+        name: "团联",
+        alias: "tuanlian",
+        avatar: "img/2.jpg",
+        profile: "爱国爱人民的团联"
+    }, {
+        id: 2,
+        name: "Maxcell",
+        alias: "maxcell",
+        avatar: "img/3.jpg",
+        profile: "听说可以帮忙修电脑的maxcell"
+    },{
+        id: 3,
+        name: "中大青年",
+        alias: "zhongdaqingnian",
+        avatar: "img/2.jpg",
+        profile: "中大有个好青年"
+    },{
+        id: 4,
+        name: "中大中年",
+        alias: "zhongdazhongnian",
+        avatar: "img/4.jpg",
+        profile: "中大有个好中年"
+    },{
+        id: 5,
+        name: "中大老年",
+        alias: "zhongdalaonian",
+        avatar: "img/5.jpg",
+        profile: "中大有个好老年"
+    },{
+        id: 6,
+        name: "m大青年",
+        alias: "mdaqingnian",
+        avatar: "img/2.jpg",
+        profile: "m大有个好青年"
+    }];
+    
+    for(var i = 0; i < corporations.length; i++) {
+        corporations[i].initial = corporations[i].alias.charAt(0).toUpperCase();
+    }
+    
+    return {
+        all:function() {
+            return corporations;
+        },
+        get:function(CorporationId) {
+            for(var i = 0; i < corporations.length; i++) {
+                if (corporations[i].id == parseInt(CorporationId)) {
+                    return corporations[i];
+                }
+            }
+            return null;
+        }
+    };
 });

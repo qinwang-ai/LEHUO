@@ -1,0 +1,49 @@
+<ion-view view-title="">
+  <!--
+  <ion-nav-buttons side="left">
+    <button class="button button-icon" ng-click="myGoBack()" style="width:30px;background:url('img/back.png')"></button>
+  </ion-nav-buttons>
+  -->
+
+  <ion-nav-buttons side="right">
+    <button class="button button-icon button-clear ion-chatbox-working"></button>
+  </ion-nav-buttons>
+
+  <ion-content style="background: white">
+    <div class="corporation corporation-detail-header">
+      <!--<div class="row">-->
+        <div class="corporation corporation-title-box">
+          <div class="corporation corporation-avatar" style="background-image:url({{corporation.avatar}});"></div>
+          <h4>{{corporation.name}}</h4>
+          <span>{{corporation.profile}}</span>
+        </div>
+      <!--</div>-->
+    </div>
+
+    <div class="corporation corporation-content">
+      <ul class="corporation corporation-content-nav">
+        <li ng-click="changeSlide(0)" class="corporation" ng-class="getIndex() == 0 ? 'nav-chosen':''">简介</li>
+        <li ng-click="changeSlide(1)" class="corporation" ng-class="getIndex() == 1 ? 'nav-chosen':''">回顾</li>
+        <li ng-click="changeSlide(2)" class="corporation" ng-class="getIndex() == 2 ? 'nav-chosen':''">近期</li>
+      </ul>
+      <ion-slide-box>
+        <ion-slide>
+          <div class="corporation corporation-inner-content">
+            {{corporation.introduction}}
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="corporation corporation-inner-content">
+            {{corporation.review}}
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="corporation corporation-inner-content">
+            {{corporation.recent}}
+          </div>
+        </ion-slide>
+      </ion-slide-box>
+    </div>
+
+  </ion-content>
+</ion-view>

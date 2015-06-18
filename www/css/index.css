@@ -173,7 +173,10 @@ a {
 	color: #67CCCC;
 	text-decoration: none;
 }
-
+.input_footbar {
+	float:right;
+	padding:0px;
+}
 
 .corporation {color: black}
 

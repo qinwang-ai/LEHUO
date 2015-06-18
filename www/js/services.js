@@ -195,7 +195,7 @@ angular.module('starter.services', [])
   var user = {
     name: "方雪鱼",
     phone: "18888888271",
-    image: "img/7.jpg"
+    image: "img/user.png"
   }
   return {
     all: function() {

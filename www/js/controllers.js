@@ -19,6 +19,8 @@ angular.module('starter.controllers', ['ionic'])
   //  $ionicHistory.goBack();
   //};
 
+  $scope.dash = Dashs.get($stateParams.dashId);
+
   $scope.showPopup = function() {
     $scope.data = {}
     // An elaborate, custom popup
@@ -33,11 +35,17 @@ angular.module('starter.controllers', ['ionic'])
     }, 1000);
   };
 
+  $scope.offlinkexist = function() {
+    if ($scope.dash.offerlink == '') {
+       return false;
+    } else {
+       return true;
+    }
+  };
+
   $scope.turn = function() {
     window.location.href = "#/tab/dash-message";
   }
-  
-  $scope.dash = Dashs.get($stateParams.dashId);
 
   var basicinfos = [];
   

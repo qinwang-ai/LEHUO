@@ -27,9 +27,14 @@
     </div>
     </div>
 
+    <div class="activity-item contents" ng-show="offlinkexist()">
+      <span class="activity-label">相关链接：</span>
+      <p><a class="activity-text" ng-href="{{dash.offerlink}}" style="color:#828282;">点击进入</a></p>
+    </div>
+
     <div class="activity-item contents">
       <span class="activity-label">备注：</span>
-      <p class="activity-text" style="">{{dash.add}}</p>
+      <p class="activity-text" >{{dash.add}}</p>
     </div>
 
     <div class="activity-item contents">

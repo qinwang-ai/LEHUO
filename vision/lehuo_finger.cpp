@@ -73,5 +73,7 @@ int main(){
 	string test_rst = pHashValue( test);
 	int a_t = HanmingDistance( answer_rst, test_rst);
 	cout<<a_t<<endl;
+	test.release();
+	answer.release();
 	return 0;
 }

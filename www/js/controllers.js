@@ -19,16 +19,15 @@ angular.module('starter.controllers', ['ionic'])
   //  $ionicHistory.goBack();
   //};
 
+  $scope.dash = Dashs.get($stateParams.dashId);
+
   $scope.showPopup = function() {
     $scope.data = {}
     // An elaborate, custom popup
     var myPopup = $ionicPopup.show({
       title: '已收藏'
     });
-    myPopup.then(function(res) {
-      console.log('Tapped!', res);
-    });
-
+    
     $(".ion-ios-star-outline").attr('class', 'button button-icon button-clear ion-ios-star');
 
     $timeout(function() {
@@ -36,11 +35,17 @@ angular.module('starter.controllers', ['ionic'])
     }, 1000);
   };
 
+  $scope.offlinkexist = function() {
+    if ($scope.dash.offerlink == '') {
+       return false;
+    } else {
+       return true;
+    }
+  };
+
   $scope.turn = function() {
     window.location.href = "#/tab/dash-message";
   }
-  
-  $scope.dash = Dashs.get($stateParams.dashId);
 
   var basicinfos = [];
   
@@ -73,14 +78,26 @@ angular.module('starter.controllers', ['ionic'])
   }
 })
 
-.controller('DashOrderCtrl', function($scope, Order) {
+.controller('DashOrderCtrl', function($scope, Order, $ionicPopup, $timeout) {
   $scope.order = Order.all();
-  
+
+  $scope.showPopup = function() {
+    $scope.data = {}
+    // An elaborate, custom popup
+    var myPopup = $ionicPopup.show({
+      title: '报名成功!'
+    });
+
+    $timeout(function() {
+       myPopup.close(); //close the popup after 3 seconds for some reason
+       window.location.href = "#/tab/dash";
+    }, 1000);
+
+  };
 })
 
 .controller('DashMessageCtrl', function($scope, User) {
   $scope.user = User.all();
-  
 })
 
 .controller('FindCtrl', function($scope, Dashs) {

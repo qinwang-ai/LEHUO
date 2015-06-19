@@ -1,7 +1,7 @@
 <ion-view view-title="联系">
   <ion-content style="background: #F0F0F0">
 	<div class="item item-avatar-left" style="background: #F0F0F0">
-      <img src="img/7.jpg">
+      <img src="img/6.jpg">
       <p style="background: white;padding:10px;overflow:hidden;">Hello!</p>
     </div>
     
@@ -11,7 +11,7 @@
     </a>
 
     <a class="item item-avatar" style="background: #F0F0F0">
-      <img src="img/7.jpg">
+      <img src="img/6.jpg">
       <p style="background: white;padding:10px;overflow:hidden;">How can I help you?</p>
     </a>
   </ion-content>

@@ -61,12 +61,6 @@ angular.module('starter.controllers', ['ionic'])
     alphabet.push(String.fromCharCode(65+i));
   }
   $scope.alphabet = alphabet;
-  $scope.queryByNameOrAlias = function() {
-    return function(e) {
-      console.log ($scope.query);
-      return !$scope.query || e.name.indexOf($scope.query) >= 0 || e.alias.indexOf($scope.query) >= 0 ;
-    }
-  }
 })
 
 .controller('CorporationDetailCtrl', function($scope, $stateParams, Corporations, $ionicSlideBoxDelegate){

@@ -174,7 +174,9 @@ a {
 	text-decoration: none;
 }
 
-
+/*
+		.corporation 代表社团页面样式代码
+*/
 .corporation {color: black}
 
 .corporation.corporation-search-bar {
@@ -185,7 +187,7 @@ a {
 }
 
 .corporation.corporation-detail-header {
-	background-image:url(/img/6.jpg);
+	background-image:url(../img/6.jpg);
 	background-size:cover;
 	height:200px;
 }
@@ -222,6 +224,14 @@ a {
 .corporation.corporation-content-nav .nav-chosen {
 	color: black;
 	border-bottom: 2px solid blue;
+}
+
+.corporation.corporation-inner-content {
+	min-height: 300px;
+	/*background-color: rgba(0,0,0,0.3);*/
+}
+
+.corporation .icon.ion-record {display: none}
 }
 
 .popup-container .popup {

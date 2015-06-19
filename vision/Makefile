@@ -1,3 +1,6 @@
+lehuo_finger:lehuo_finger.cpp
+	g++ $^ -o $@ `pkg-config opencv --cflags --libs`
+	
 lehuo:lehuo.cpp
-	g++ lehuo.cpp -o lehuo `pkg-config opencv --cflags --libs`
+	g++ $^ -o $@ `pkg-config opencv --cflags --libs`
 

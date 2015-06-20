@@ -173,3 +173,157 @@ a {
 	color: #67CCCC;
 	text-decoration: none;
 }
+.input_footbar {
+	float:right;
+	padding:0px;
+}
+
+.popup-container .popup {
+    width: 100px;
+}
+
+.popup-head {
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+    width: 100px;
+}
+
+.corporation {color: black}
+
+.corporation.corporation-search-bar {
+  width: 10px;
+  position: fixed;
+  right: 0;
+  top: 70px;
+}
+
+.corporation.corporation-detail-header {
+	background-image:url(/img/6.jpg);
+	background-size:cover;
+	height:200px;
+}
+
+.corporation.corporation-title-box {
+	width:120px;
+	margin:auto;
+	padding-top:40px;
+	text-align:center;
+	color:white!important;
+}
+
+.corporation.corporation-avatar {
+	margin:auto;
+	height:70px;
+	width:70px;
+	background-size:cover;
+	border:2px solid white;
+	border-radius:50%;
+}
+
+.corporation.corporation-content-nav {
+	text-align: center;
+	border-bottom: 1px solid gray;
+}
+
+.corporation.corporation-content-nav li {
+	display: inline-block;
+	padding: 8px 15px 8px 15px;
+	margin: 0 5px 0 5px;
+	color: gray；
+}
+
+.corporation.corporation-content-nav .nav-chosen {
+	color: black;
+	border-bottom: 2px solid blue;
+}
+
+.find.typeBar span {
+	font-size: 1.7rem;
+	margin-left: 16px;
+	color: #888;
+}
+
+.find.typeBar {
+	height: 40px;
+	padding-top: 10px;
+}
+
+.activeType {
+	color: #67CCCC !important;
+}
+
+.find img {
+	width:80px;
+	height:85px;
+	float: left;
+	margin-left: 3px;
+}
+
+.find.myItem {
+	padding-top: 7px;
+	padding-bottom: 4px;
+	display: inline-block;
+	width: 100%;
+}
+
+.find.textBlock {
+	float: left;
+	margin-left: 6px;
+	width: 285px;
+	overflow: visible;
+}
+
+.leftText, .rightText {
+	float: left;
+	width:45%;
+	word-wrap: normal;
+}
+
+.find.myItem span {
+	font-size: 8px;
+	display: block;
+	color: #888;
+	line-height: 20px;
+}
+
+.find h5 {
+	margin-top: 0px;
+}
+
+.find.timeBar {
+	background-color: #E8E8E8;
+	height: 28px;
+	padding-top: 6px;
+	border-bottom: solid #CFCFCF 1px;
+}
+
+.find.items {
+	border-bottom: solid #CFCFCF 1px;
+}
+
+.find.timeBar span {
+	color: #888;
+	margin-left: 10px;
+}
+
+a.item {
+	color: black;
+}
+
+a.item.message i.firstIcon, a.item.collection i.firstIcon {
+	color: rgba(0, 192, 255, 1);
+}
+
+a.item.warning i.firstIcon {
+	color: rgba(255, 211, 33, 1);
+}
+
+a.item.following i.firstIcon {
+	color: rgba(255, 62, 0, 1);
+}
+
+a.item.signUp i.firstIcon, a.item.setting i.firstIcon {
+	color: #888;
+}
+

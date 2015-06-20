@@ -1,9 +1,10 @@
 <ion-view view-title="">
-  <!--
-  <ion-nav-buttons side="left">
-    <button class="button button-icon" ng-click="myGoBack()" style="width:30px;background:url('img/back.png')"></button>
-  </ion-nav-buttons>
-  -->
+  <ion-nav-bar class="bar-positive" align-title="center">
+    <ion-nav-back-button class="button-clear"
+      ng-click="myGoBack()">
+      <i class="ion-chevron-left"></i>
+    </ion-nav-back-button>
+  </ion-nav-bar>
 
   <ion-nav-buttons side="right">
     <button class="button button-icon button-clear ion-ios-star-outline" ng-click="showPopup()"></button>
@@ -15,7 +16,7 @@
   <ion-content style="background: #F0F0F0">
     
     <div class="activity-item">
-      <img class="activity-image" src="img/post.jpg" alt="Activity Image">
+      <img class="activity-image" ng-src="{{dash.poster}}" alt="Activity Image">
       <p style="padding-top:10px;color:black;">{{dash.name}}</p>
       <p style="color:#929292;">{{dash.laucher}}</p>
     </div>
@@ -29,7 +30,7 @@
 
     <div class="activity-item contents" ng-show="offlinkexist()">
       <span class="activity-label">相关链接：</span>
-      <a class="activity-text" ng-href="{{dash.offerlink}}" style="color:#828282;display:inline-block;">点击进入</a>
+      <p><a class="activity-text" ng-href="{{dash.offerlink}}" style="color:#828282;">点击进入</a></p>
     </div>
 
     <div class="activity-item contents">

@@ -1,3 +1,9 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
 <ion-view view-title="">
   <!--
   <ion-nav-buttons side="left">
@@ -27,14 +33,9 @@
     </div>
     </div>
 
-    <div class="activity-item contents" ng-show="offlinkexist()">
-      <span class="activity-label">相关链接：</span>
-      <a class="activity-text" ng-href="{{dash.offerlink}}" style="color:#828282;display:inline-block;">点击进入</a>
-    </div>
-
     <div class="activity-item contents">
       <span class="activity-label">备注：</span>
-      <p class="activity-text" >{{dash.add}}</p>
+      <p class="activity-text" style="">{{dash.add}}</p>
     </div>
 
     <div class="activity-item contents">
@@ -42,7 +43,7 @@
       <p class="activity-text" style="text-indent:2em;">{{dash.more}}</p>
     </div>
 
-    <a href="#/tab/dash-order" ng-show="{{dash.order}}">
+    <a href="#/tab/find/dash-order" ng-show="{{dash.order}}">
       <div class="top order activity-item">
       预约
       </div>

@@ -1,7 +1,6 @@
 angular.module('starter.controllers', ['ionic'])
 
 .controller('DashCtrl', function($scope, Dashs) {
-
     $scope.dashs = Dashs.all();
   // 轮播图数据初始化
   var slides = [];
@@ -15,9 +14,9 @@ angular.module('starter.controllers', ['ionic'])
 })
 
 .controller('DashDetailCtrl', function($scope, $stateParams, Dashs, $ionicPopup, $timeout) {
-  //$scope.myGoBack = function() {
-  //  $ionicHistory.goBack();
-  //};
+  $scope.myGoBack = function() {
+      window.location.href = "#/tab/dash";
+  };
 
   $scope.dash = Dashs.get($stateParams.dashId);
 

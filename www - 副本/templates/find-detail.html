@@ -1,0 +1,53 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="">
+  <!--
+  <ion-nav-buttons side="left">
+    <button class="button button-icon" ng-click="myGoBack()" style="width:30px;background:url('img/back.png')"></button>
+  </ion-nav-buttons>
+  -->
+
+  <ion-nav-buttons side="right">
+    <button class="button button-icon button-clear ion-ios-star-outline" ng-click="showPopup()"></button>
+    <button class="button button-icon button-clear ion-ios-alarm-outline"></button>
+    <button class="button button-icon button-clear ion-chatbox-working" ng-click="turn()"></button>
+    <button class="button button-icon button-clear ion-share"></button>
+  </ion-nav-buttons>
+
+  <ion-content style="background: #F0F0F0">
+    
+    <div class="activity-item">
+      <img class="activity-image" src="img/post.jpg" alt="Activity Image">
+      <p style="padding-top:10px;color:black;">{{dash.name}}</p>
+      <p style="color:#929292;">{{dash.laucher}}</p>
+    </div>
+
+    <div>
+    <div class="activity-item contents" ng-repeat="basicinfo in basicinfos" style="margin:0px 15px;">
+      <span class="activity-label">{{basicinfo.label}}</span>
+      <p class="activity-text">{{basicinfo.text}}</p>
+    </div>
+    </div>
+
+    <div class="activity-item contents">
+      <span class="activity-label">备注：</span>
+      <p class="activity-text" style="">{{dash.add}}</p>
+    </div>
+
+    <div class="activity-item contents">
+      <p style="margin:0px;">活动详情：</p>
+      <p class="activity-text" style="text-indent:2em;">{{dash.more}}</p>
+    </div>
+
+    <a href="#/tab/find/dash-order" ng-show="{{dash.order}}">
+      <div class="top order activity-item">
+      预约
+      </div>
+    </a>
+
+  </ion-content>
+</ion-view>

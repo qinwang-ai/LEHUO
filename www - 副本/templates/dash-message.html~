@@ -1,0 +1,26 @@
+<ion-view view-title="联系">
+  <ion-content style="background: #F0F0F0">
+	<div class="item item-avatar-left" style="background: #F0F0F0">
+      <img src="img/6.jpg">
+      <p style="background: white;padding:10px;overflow:hidden;">Hello!</p>
+    </div>
+    
+    <a class="item item-avatar-right" style="background: #F0F0F0">
+      <img src="{{user.image}}">
+      <p style="background: white;padding:10px;overflow:hidden;">I need help.</p>
+    </a>
+
+    <a class="item item-avatar" style="background: #F0F0F0">
+      <img src="img/6.jpg">
+      <p style="background: white;padding:10px;overflow:hidden;">How can I help you?</p>
+    </a>
+  </ion-content>
+  <ion-footer-bar style="background: #F0F0F0;width:100%;">
+	<div style="width:100%;">
+      <button class="button button-icon ion-happy-outline"></button>
+      <input style="width:60%;margin-top:5px;">
+      <button class="button button-icon ion-ios-mic-outline input_footbar" style=""></button>
+      <button class="button button-icon ion-ios-plus-outline input_footbar" style="float:right;padding:0px;"></button>
+    </div>
+  </ion-footer-bar>
+</ion-view>

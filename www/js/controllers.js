@@ -37,7 +37,7 @@ angular.module('starter.controllers', ['ionic'])
   $scope.showSharePopup = function() {
     // An elaborate, custom popup
     var mySharePopup = $ionicPopup.show({
-      templateUrl: 'find-detail-share.html',
+      templateUrl: 'templates/find-detail-share.html',
       title: '分享到',
       scope: $scope,
       buttons: [

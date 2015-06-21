@@ -1,0 +1,61 @@
+<ion-view view-title="发现">
+  <ion-nav-buttons side="right">
+	<a class="button button-icon icon ion-search" href="#"></a>
+  </ion-nav-buttons>
+  <ion-content>
+  	<div class="find myContent">
+  		<div class="find typeBar" ng-init="selectedTab = 'show'">
+  			<span ng-click="showItems('show'); selectedTab = 'show'"
+  				ng-class="{'activeType': selectedTab === 'show'}">
+  				展览
+  			</span>
+  			<span ng-click="showItems('lecture'); selectedTab = 'lecture'"
+  				ng-class="{'activeType': selectedTab === 'lecture'}">
+  				讲座
+  			</span>
+  			<span ng-click="showItems('employ'); selectedTab = 'employ'"
+  				ng-class="{'activeType': selectedTab === 'employ'}">
+  				招聘
+  			</span>
+  			<span ng-click="showItems('music'); selectedTab = 'music'"
+  				ng-class="{'activeType': selectedTab === 'music'}">
+  				音乐
+  			</span>
+  			<span ng-click="showItems('drama'); selectedTab = 'drama'"
+  				ng-class="{'activeType': selectedTab === 'drama'}">
+  				戏剧
+  			</span>
+  			<span ng-click="showItems('volunteer'); selectedTab = 'volunteer'"
+  				ng-class="{'activeType': selectedTab === 'volunteer'}">
+  				公益
+  			</span>
+  			<span ><i class="icon ion-chevron-down"></i></span>
+  		</div>
+  		<div class="find items" ng-repeat="item in items | orderBy: '-startdate'">
+  			<div class="find timeBar" ng-if="getMonth(item.startdate) != month || $first">
+  				<span>{{changeAndShow(item.startdate)}}月份</span>
+  			</div>
+  			<a ng-href="{{item.findLink}}">
+	  			<div class="find myItem">
+	  				<div>
+	  					<img ng-src="{{item.image}}">
+	  				</div>
+	  				<div class="find textBlock">
+	  					<h5>{{item.title}}</h5>
+	  					<div class="find leftText">
+		  					<span>时间: {{item.startdate}}~{{item.enddate}}</span>
+		  					<span style="width: 500px">地点: {{item.address}}</span>
+		  					<span>费用: {{item.fee}}</span>
+		  				</div>
+		  				<div class="find rightText">
+		  					<span>每天: {{item.starttime}}~{{item.finaltime}}</span>
+		  					<span style="visibility:hidden">1</span>
+		  					<span>发起: {{item.laucher}}</span>
+		  				</div>
+	  				</div>
+	  			</div>
+	  		</a>
+  		</div>
+  	</div>
+  </ion-content>
+</ion-view>

@@ -1,15 +1,12 @@
-<!--
-  This template loads for the 'tab.friend-detail' state (app.js)
-  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
-  The FriendsCtrl pulls data from the Friends service (service.js)
-  The Friends service returns an array of friend data
--->
 <ion-view view-title="">
-  <!--
-  <ion-nav-buttons side="left">
-    <button class="button button-icon" ng-click="myGoBack()" style="width:30px;background:url('img/back.png')"></button>
+  <ion-nav-bar class="bar-positive" align-title="center">
+    <ion-nav-back-button ng-show="false">
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+   <ion-nav-buttons side="left">
+    <button class="button button-clear ion-chevron-left" ng-click="myGoBack()"></button>
   </ion-nav-buttons>
-  -->
 
   <ion-nav-buttons side="right">
     <button class="button button-icon button-clear ion-ios-star-outline" ng-click="showPopup()"></button>
@@ -33,9 +30,14 @@
     </div>
     </div>
 
+    <div class="activity-item contents" ng-show="offlinkexist()">
+      <span class="activity-label">相关链接：</span>
+      <p><a class="activity-text" ng-href="{{dash.offerlink}}" style="color:#828282;">点击进入</a></p>
+    </div>
+
     <div class="activity-item contents">
       <span class="activity-label">备注：</span>
-      <p class="activity-text" style="">{{dash.add}}</p>
+      <p class="activity-text" >{{dash.add}}</p>
     </div>
 
     <div class="activity-item contents">
@@ -43,7 +45,7 @@
       <p class="activity-text" style="text-indent:2em;">{{dash.more}}</p>
     </div>
 
-    <a href="#/tab/find/dash-order" ng-show="{{dash.order}}">
+    <a href="#/tab/dash-order" ng-show="{{dash.order}}">
       <div class="top order activity-item">
       预约
       </div>

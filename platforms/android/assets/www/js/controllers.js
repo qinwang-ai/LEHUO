@@ -1,7 +1,6 @@
 angular.module('starter.controllers', ['ionic'])
 
 .controller('DashCtrl', function($scope, Dashs) {
-
     $scope.dashs = Dashs.all();
   // 轮播图数据初始化
   var slides = [];
@@ -15,9 +14,9 @@ angular.module('starter.controllers', ['ionic'])
 })
 
 .controller('DashDetailCtrl', function($scope, $stateParams, Dashs, $ionicPopup, $timeout) {
-  //$scope.myGoBack = function() {
-  //  $ionicHistory.goBack();
-  //};
+  $scope.myGoBack = function() {
+      window.location.href = "#/tab/dash";
+  };
 
   $scope.dash = Dashs.get($stateParams.dashId);
 
@@ -29,11 +28,28 @@ angular.module('starter.controllers', ['ionic'])
     });
     
     $(".ion-ios-star-outline").attr('class', 'button button-icon button-clear ion-ios-star');
-    /*
+
     $timeout(function() {
        myPopup.close(); //close the popup after 3 seconds for some reason
+    }, 1000);
+  };
+
+  $scope.showSharePopup = function() {
+    // An elaborate, custom popup
+    var mySharePopup = $ionicPopup.show({
+      templateUrl: 'templates/find-detail-share.html',
+      title: '分享到',
+      scope: $scope,
+      buttons: [
+        { text: '取消' }
+      ]
+    });
+    mySharePopup.then(function(res) {
+      console.log('SharePopupTapped!', res);
+    });
+    $timeout(function() {
+       mySharePopup.close(); //close the popup after 3 seconds for some reason
     }, 10000);
-*/
   };
 
   $scope.offlinkexist = function() {
@@ -67,12 +83,6 @@ angular.module('starter.controllers', ['ionic'])
     alphabet.push(String.fromCharCode(65+i));
   }
   $scope.alphabet = alphabet;
-  $scope.queryByNameOrAlias = function() {
-    return function(e) {
-      console.log ($scope.query);
-      return !$scope.query || e.name.indexOf($scope.query) >= 0 || e.alias.indexOf($scope.query) >= 0 ;
-    }
-  }
 })
 
 .controller('CorporationDetailCtrl', function($scope, $stateParams, Corporations, $ionicSlideBoxDelegate){

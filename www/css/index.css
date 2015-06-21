@@ -143,6 +143,7 @@ a {
 	border-radius: 5px;
 	margin-top:12px;
 	margin-bottom: 15px;
+	background-color: #08A7D4;
 }
 
 /**/
@@ -179,6 +180,54 @@ a {
 	padding:0px;
 }
 
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
+	color:#08d499;
+	text-decoration: none;
+}
+
+.ion-ios-lightbulb-outline {
+	background-image: url(../img/first.png);
+	
+}
+
+.ion-ios-lightbulb {
+	background-image: url(../img/first_press.png);
+}
+
+.ion-ios-people {
+    background-image: url(../img/public_press.png);
+}
+
+.ion-ios-people-outline {
+    background-image: url(../img/public.png);
+}
+
+.ion-ios-person {
+    background-image: url(../img/mine_press.png);
+}
+
+.ion-ios-person-outline {
+    background-image: url(../img/mine.png);
+}
+
+.ion-ios-location {
+	background-image: url(../img/discover_press.png);
+}
+
+.ion-ios-location-outline {
+	background-image: url(../img/discover.png);
+}
+
+.ion-ios-lightbulb:before, .ion-ios-lightbulb-outline:before, .ion-ios-people-outline:before, .ion-ios-people:before, .ion-ios-location-outline:before, .ion-ios-location:before, .ion-ios-person:before, .ion-ios-person-outline:before {
+	content: "";
+}
+
+.ion-ios-lightbulb, .ion-ios-lightbulb-outline, .ion-ios-people-outline, .ion-ios-people, .ion-ios-location-outline, .ion-ios-location, .ion-ios-person, .ion-ios-person-outline {
+	background-size: 25%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 <<<<<<< HEAD
 .popup-container .popup {
     width: 100px;
@@ -188,7 +237,6 @@ a {
     background-color: black;
     opacity: 0.7;
     color: white;
-    width: 100px;
 }
 
 =======
@@ -263,7 +311,6 @@ a {
     background-color: black;
     opacity: 0.7;
     color: white;
-    width: 100px;
 }
 
 >>>>>>> 1e93c82a0fcb43299384daaf33df7a287a08fb22

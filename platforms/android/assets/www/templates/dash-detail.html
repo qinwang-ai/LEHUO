@@ -1,19 +1,17 @@
 <ion-view view-title="">
-  <!--
   <ion-nav-buttons side="left">
     <button class="button button-icon" ng-click="myGoBack()" style="width:30px;background:url('img/back.png')"></button>
   </ion-nav-buttons>
-  -->
 
   <ion-nav-buttons side="right">
     <button class="button button-icon button-clear ion-ios-star-outline" ng-click="showPopup()"></button>
     <button class="button button-icon button-clear ion-ios-alarm-outline"></button>
     <button class="button button-icon button-clear ion-chatbox-working" ng-click="turn()"></button>
-    <button class="button button-icon button-clear ion-share"></button>
+    <button class="button button-icon button-clear ion-share" ng-click="showSharePopup()"></button>
   </ion-nav-buttons>
 
   <ion-content style="background: #F0F0F0">
-    
+
     <div class="activity-item">
       <img class="activity-image" src="img/post.jpg" alt="Activity Image">
       <p style="padding-top:10px;color:black;">{{dash.name}}</p>

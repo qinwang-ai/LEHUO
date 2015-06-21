@@ -31,7 +31,7 @@ angular.module('starter.controllers', ['ionic'])
 
     $timeout(function() {
        myPopup.close(); //close the popup after 3 seconds for some reason
-    }, 3000);
+    }, 1000);
   };
 
   $scope.showSharePopup = function() {

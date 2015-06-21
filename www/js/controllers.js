@@ -34,6 +34,24 @@ angular.module('starter.controllers', ['ionic'])
     }, 1000);
   };
 
+  $scope.showSharePopup = function() {
+    // An elaborate, custom popup
+    var mySharePopup = $ionicPopup.show({
+      templateUrl: 'find-detail-share.html',
+      title: '分享到',
+      scope: $scope,
+      buttons: [
+        { text: '取消' }
+      ]
+    });
+    mySharePopup.then(function(res) {
+      console.log('SharePopupTapped!', res);
+    });
+    $timeout(function() {
+       mySharePopup.close(); //close the popup after 3 seconds for some reason
+    }, 10000);
+  };
+
   $scope.offlinkexist = function() {
     if ($scope.dash.offerlink == '') {
        return false;

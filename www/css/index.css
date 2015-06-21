@@ -356,3 +356,11 @@ a.item.signUp i.firstIcon, a.item.setting i.firstIcon {
 	color: #888;
 }
 
+.find-detail-share {
+	width: 90%;
+}
+
+.find-detail-share-img {
+	width: 100%;
+}
+
